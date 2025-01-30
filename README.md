@@ -1,2 +1,4 @@
+If the PC does not meet the Windows 11 system requirements you will need to enable the correct registry values. You can pull the values from the script WXIU_bypass or run it before applying WXIU. A reboot is required after performing the registry changes.
+
 I've only tested this with PDQ deploy. It will need admin credetnails so you may need to modify the script. Don't use plaintext passwords in scripts--encyrpt them first in an .xml file. Don't enable win-rm.
 This will also perform a cleanup after the install is successful. PDQ may report it was failed but setupact.log shows it's successful. The machine will require a manual reboot despite having code for a reboot. This is because of the /noreboot switch. If you want the computers to restart automatically, remove this switch. There are no prompts to display when the update is finished; you could check setupact.log or look in task manager (details) to see if SetupHost.exe is still running to verify.
